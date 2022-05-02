@@ -6,6 +6,7 @@
   align-items: center;
   margin-top: 24px;
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  border-radius: 5px;
 }
 
 .TodoItem-p {
@@ -14,6 +15,7 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+  color: black
 }
 .TodoItem-p--complete {
   text-decoration: line-through;
@@ -21,26 +23,21 @@
 
 .Icon {
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 48px;
-  width: 48px;
   font-size: 24px;
-  font-weight: bold;
-  /* background-color: #CCC; */
+  color: gray;
+  font-family: FontAwesome;
+  user-select: none;
 }
 
 .Icon-check {
-  position: absolute;
   left: 12px;
 }
+
 .Icon-check--active {
   color: #4caf50;
 }
 
 .Icon-delete {
-  position: absolute;
   top: -24px;
   right: 0;
 }
