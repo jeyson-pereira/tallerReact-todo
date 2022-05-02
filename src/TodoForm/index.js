@@ -17,8 +17,12 @@ function TodoForm() {
   };
   const onSubmit = (event) => {
     event.preventDefault();
-    addTodo(newTodoValue);
-    setOpenModal(false);
+    if (newTodoValue === '') {
+      alert("Debe contener algun TODO para añadir");
+    }else{
+      addTodo(newTodoValue);
+      setOpenModal(false);
+    }
   };
 
   return (
@@ -27,7 +31,7 @@ function TodoForm() {
       <textarea
         value={newTodoValue}
         onChange={onChange}
-        placeholder="Cortar la cebolla oara el almuerzo"
+        placeholder="Cortar la cebolla para el almuerzo"
       />
       <div className="TodoForm-buttonContainer">
         <button
